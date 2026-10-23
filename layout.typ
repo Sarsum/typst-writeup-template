@@ -57,11 +57,16 @@
     it
   }
 
+  show link: it => {
+    set text(fill: blue.darken(20%))
+    it
+  }
+
   body
 }
 
 #let appendix(body) = {
-  set heading(numbering: "A.1")
+  set heading(numbering: "A.1", supplement: "Appendix", outlined: false)
   counter(heading).update(0)
   body
 }
